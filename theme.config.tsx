@@ -2,9 +2,9 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>ER Components</span>,
+  logo: <span>Password generator</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/',
   },
   editLink:{
     component: null,
@@ -19,6 +19,7 @@ const config: DocsThemeConfig = {
   footer: {
     text: '',
   },
+  
 }
 
 export default config
