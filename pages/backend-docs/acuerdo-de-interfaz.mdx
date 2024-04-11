@@ -1,0 +1,90 @@
+# Feature: Login
+
+## Sign In (Create a new user)
+
+### Request
+
+```js
+[ POST ] https://localhost:8000/add-user
+```
+
+### Post:
+
+```js
+
+        #body
+        {
+            "name": "userName",
+            "surname": "userSurname",
+            "email"   : "userEmail",
+            "password": "userPassword"
+        }
+
+```
+
+### Response:
+
+#### success
+
+```js
+
+    {
+        "userName": "userName",
+        "email": "userEmail"
+    }
+
+```
+
+#### error
+
+    ```js
+
+    {
+        "Error: something was wrong!"        
+    }
+
+````
+
+
+## Login user
+
+```js
+
+[ POST ] https://localhost:8000/login
+
+````
+
+### Post:
+
+```js
+
+        #body
+        {
+            "email"   : "userEmail",
+            "password": "userPassword"
+        }
+
+```
+
+
+### Response:
+
+#### success
+
+```js
+
+    {
+        "Success"
+    }
+
+```
+
+#### error
+
+    ```js
+
+    {
+        "Error: incorrectly User or Password!"        
+    }
+
+````
