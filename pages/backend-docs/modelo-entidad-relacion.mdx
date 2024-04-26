@@ -6,22 +6,10 @@ import Image from 'next/image'
 ## Entities 
     
 - Users         
-- Passwords
-- Passwords resets
+- Room
+- Questions
 
 
 ## Diagram
 
-![Entities](/entity-relationship-model.png)
-
-
-## Tables
-
-USER 
-< id_user PK, email PK, profile_image, name, hashed_password, created_at, updated_at >
-
-PASSWORD
-< id_passwords PK, id_users FK, name, image, url , date, hashed_passwords, created_at ,updated_at >
-  
-PASSWORDS RESETS
-< token PK, email_user, created_at, expires_at > 
+![Entities](/DataBaseQuizGame.drawio.png)

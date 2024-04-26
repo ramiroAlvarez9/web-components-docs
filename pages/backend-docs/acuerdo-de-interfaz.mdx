@@ -1,11 +1,13 @@
-# Feature: Login
+## Create new room 
 
-## Sign In (Create a new user)
+(user click on button "create new room")
 
 ### Request
 
 ```js
-[ POST ] https://localhost:8000/add-user
+
+[ POST ] https://localhost:3000/create
+
 ```
 
 ### Post:
@@ -14,44 +16,48 @@
 
         #body
         {
-            "name"    : "userName",
-            "email"   : "userEmail",
-            "password": "userPassword"
+                "roomName": "roomName",
+                "userName": "userName"
         }
 
 ```
 
-### Response:
-
-#### success
+### Response
 
 ```js
 
-    {
-        "userName": "userName",
-        "email": "userEmail"
-    }
+        #body
+        {
+
+                "response" : {room, user}
+                "error": null
+        }
 
 ```
 
-#### error
-
-    ```js
-
-    {
-        "Error: something was wrong!"        
-    }
-
-````
-
-
-## Login user
+### Error
 
 ```js
 
-[ POST ] https://localhost:8000/login
+        #body
+        {
+                "error": {status, code}, 
+                "response": null   
+        }
 
-````
+```
+
+## Join room 
+
+(Connnection with web socket)
+
+### Request
+
+```js
+
+[ POST ] https://localhost:3000/join-room
+
+```
 
 ### Post:
 
@@ -59,31 +65,69 @@
 
         #body
         {
-            "email"   : "userEmail",
-            "password": "userPassword"
+                "userId": "userId"
+                "roomId": "roomId",
         }
 
 ```
 
+### Response
 
-### Response:
-
-#### success
 
 ```js
 
-    {
-        "Success"
-    }
+        #body
+        {
+                "userId": "userId"
+                "roomId": "roomId",
+        }
 
 ```
 
-#### error
+### Error
+```js
 
-    ```js
+        #body
+        {
+                "error": {status, code}, 
+                "response": null   
+        }c
 
-    {
-        "Error: incorrectly User or Password!"        
-    }
+```
 
-````
+## Join room 
+
+
+
+### Request
+
+```js
+
+[ Web socket event ] user click on start game 
+
+```
+
+### Post:
+
+```js
+
+        #body
+        {
+                "roomId": "roomId",
+        }
+
+```
+
+### Response:
+
+```js
+
+        #body
+        {
+                "response":  [ { questions }  ], 
+        }
+        // question.id, question.title, question.alternatives[] ------  alternatives.id, alternatives.description, alternatives.correct<true | false> }
+
+```
+
+

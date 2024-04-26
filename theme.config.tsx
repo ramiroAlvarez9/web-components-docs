@@ -2,7 +2,7 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>Password generator</span>,
+  logo: <span>Quiz game</span>,
   project: {
     link: 'https://github.com/',
   },
