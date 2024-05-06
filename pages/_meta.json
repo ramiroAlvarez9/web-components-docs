@@ -5,10 +5,9 @@
     "type": "page"
   },
   "repositorio-del-proyecto": "Repositorio del proyecto",
-  "pipelines-workspace": "Pipelines Workspace",
+  "diagrama-de-flujo" : "Diagrama de flujo de Interacción / Datos", 
   "backend-docs": "Backend Docs",
-  "frontend-docs": "Frontend Docs",
-  "readme": "Readme",
+  "frontend-docs": "Frontend Docs", 
   "contacto": {
     "title": "Contacto ↗",
     "type": "page",

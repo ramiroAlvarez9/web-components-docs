@@ -2,7 +2,7 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>Quiz game</span>,
+  logo: <span>Answer Races 2024 (Documentación) </span>,
   project: {
     link: 'https://github.com/',
   },
@@ -19,6 +19,11 @@ const config: DocsThemeConfig = {
   footer: {
     text: '',
   },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – Docs'
+    }
+  }
   
 }
 
