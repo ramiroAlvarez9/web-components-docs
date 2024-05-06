@@ -4,7 +4,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
   logo: <span>Answer Races 2024 (Documentación) </span>,
   project: {
-    link: 'https://github.com/',
+    link: null,
   },
   editLink:{
     component: null,
@@ -13,7 +13,7 @@ const config: DocsThemeConfig = {
     content: null,
   },
   chat: {
-    link: 'https://discord.com',
+    link: null,
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
